@@ -8,11 +8,12 @@
 
 # Index
 
-| Problem | C | C++ | Python3 |
-| :--: | :--: | :--: | :--: |
-| [Bit Operations](#bit-operations) | ✔️ | ✔️ | ✔️ |
+| Problem | PowerShell | Python3 | C/C++ | JS |
+| :-- | :--: | :--: | :--: | :--: |
+| [Bit Operations](#bit-operations) |  | ✔️ | ✔️ |  |
+| [100 Doors](#100-doors) | ✔️ | ✔️ | ✔️ | ✔️ |
 
-## Bit Operations
+### Bit Operations
 
 Refer: [Problem](http://www.rosettacode.org/wiki/Bitwise_operations) <br>
 
@@ -94,3 +95,30 @@ for operator in operators:
     print('A {} B = '.format(operator))
 #     print('A {} B = {}'.format(operator,operation(a,b)))
 ```
+
+### 100 Doors
+
+Refer: [Problem](https://rosettacode.org/wiki/100_doors) <br>
+
+The number of times a door is toggled is equal to it's number of unique factors. <br>
+eg. Door #20 will be toggled 6 times (1,2,4,5,10,20) <br>
+Each pair of toggles will put the door in it's initial state (CLOSED). <br>
+The only numbers that will have odd number of factors are perfect squares (they have a repeated factor). <br>
+So, the only doors to be OPEN in the end will be perfect squares. (1,4,9..100) <br>
+
+```powershell
+1..10 | forEach {"Door $($_*$_) is open!"}
+```
+```python
+for i in range(1,11):
+    print(f"Door {i**2} is open!")
+```
+```c
+for (int i=1; i < 11; i++)
+    printf("\nDoor %d is open!", i*i);
+```
+```js
+for (var i=1; i<11; i++)
+    console.log(`Door ${i*i} is open!`);
+```
+
