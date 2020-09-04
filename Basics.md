@@ -96,9 +96,7 @@ for operator in operators:
 #     print('A {} B = {}'.format(operator,operation(a,b)))
 ```
 
-### 100 Doors
-
-Refer: [Problem](https://rosettacode.org/wiki/100_doors) <br>
+### [100 Doors](https://rosettacode.org/wiki/100_doors)
 
 The number of times a door is toggled is equal to it's number of unique factors. <br>
 eg. Door #20 will be toggled 6 times (1,2,4,5,10,20) <br>
@@ -111,7 +109,7 @@ So, the only doors to be OPEN in the end will be perfect squares. (1,4,9..100) <
 ```
 ```python
 for i in range(1,11):
-    print(f"Door {i**2} is open!")
+    print(f"Door {i*i} is open!")
 ```
 ```c
 for (int i=1; i < 11; i++)
